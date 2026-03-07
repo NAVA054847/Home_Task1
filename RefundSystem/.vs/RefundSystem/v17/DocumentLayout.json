@@ -1,0 +1,386 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{174CE72A-08A2-4119-B78D-4AAFD564DCBB}|RefundSystem.API\\RefundSystem.API.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.api\\refundsystem.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{174CE72A-08A2-4119-B78D-4AAFD564DCBB}|RefundSystem.API\\RefundSystem.API.csproj|solutionrelative:refundsystem.api\\refundsystem.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{174CE72A-08A2-4119-B78D-4AAFD564DCBB}|RefundSystem.API\\RefundSystem.API.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.api\\controllers\\refundcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{174CE72A-08A2-4119-B78D-4AAFD564DCBB}|RefundSystem.API\\RefundSystem.API.csproj|solutionrelative:refundsystem.api\\controllers\\refundcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10310238-825D-4C9A-8914-DB81E272B8CC}|RefundSystem.Service\\RefundSystem.Service.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.service\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10310238-825D-4C9A-8914-DB81E272B8CC}|RefundSystem.Service\\RefundSystem.Service.csproj|solutionrelative:refundsystem.service\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72B00AC9-430B-4F86-8154-5D65F4C007AE}|RefundSystem.Data\\RefundSystem.Data.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.data\\repository\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72B00AC9-430B-4F86-8154-5D65F4C007AE}|RefundSystem.Data\\RefundSystem.Data.csproj|solutionrelative:refundsystem.data\\repository\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72B00AC9-430B-4F86-8154-5D65F4C007AE}|RefundSystem.Data\\RefundSystem.Data.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.data\\context\\refundsystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72B00AC9-430B-4F86-8154-5D65F4C007AE}|RefundSystem.Data\\RefundSystem.Data.csproj|solutionrelative:refundsystem.data\\context\\refundsystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.core\\entities\\requeststatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|solutionrelative:refundsystem.core\\entities\\requeststatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.core\\entities\\clerk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|solutionrelative:refundsystem.core\\entities\\clerk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.core\\entities\\budget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|solutionrelative:refundsystem.core\\entities\\budget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72B00AC9-430B-4F86-8154-5D65F4C007AE}|RefundSystem.Data\\RefundSystem.Data.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.data\\repository\\refundrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72B00AC9-430B-4F86-8154-5D65F4C007AE}|RefundSystem.Data\\RefundSystem.Data.csproj|solutionrelative:refundsystem.data\\repository\\refundrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{174CE72A-08A2-4119-B78D-4AAFD564DCBB}|RefundSystem.API\\RefundSystem.API.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{174CE72A-08A2-4119-B78D-4AAFD564DCBB}|RefundSystem.API\\RefundSystem.API.csproj|solutionrelative:refundsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{174CE72A-08A2-4119-B78D-4AAFD564DCBB}|RefundSystem.API\\RefundSystem.API.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.api\\dtos\\approverefundrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{174CE72A-08A2-4119-B78D-4AAFD564DCBB}|RefundSystem.API\\RefundSystem.API.csproj|solutionrelative:refundsystem.api\\dtos\\approverefundrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10310238-825D-4C9A-8914-DB81E272B8CC}|RefundSystem.Service\\RefundSystem.Service.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.service\\service\\refundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10310238-825D-4C9A-8914-DB81E272B8CC}|RefundSystem.Service\\RefundSystem.Service.csproj|solutionrelative:refundsystem.service\\service\\refundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.core\\interfaces\\irefundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|solutionrelative:refundsystem.core\\interfaces\\irefundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.core\\entities\\refundrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|solutionrelative:refundsystem.core\\entities\\refundrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.core\\entities\\monthlyincome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|solutionrelative:refundsystem.core\\entities\\monthlyincome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.core\\entities\\citizen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|solutionrelative:refundsystem.core\\entities\\citizen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.core\\interfaces\\irefundrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|solutionrelative:refundsystem.core\\interfaces\\irefundrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{174CE72A-08A2-4119-B78D-4AAFD564DCBB}|RefundSystem.API\\RefundSystem.API.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{174CE72A-08A2-4119-B78D-4AAFD564DCBB}|RefundSystem.API\\RefundSystem.API.csproj|solutionrelative:refundsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.core\\readmodels\\clerkrequestdetailsreadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|solutionrelative:refundsystem.core\\readmodels\\clerkrequestdetailsreadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.core\\readmodels\\monthlyincomereadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|solutionrelative:refundsystem.core\\readmodels\\monthlyincomereadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.core\\readmodels\\budgetreadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|solutionrelative:refundsystem.core\\readmodels\\budgetreadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|c:\\users\\user\\desktop\\home_task\\refundsystem\\refundsystem.core\\readmodels\\pendingrequestreadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CDDB13B-8537-4475-9759-C8D3AB63FC34}|RefundSystem.Core\\RefundSystem.Core.csproj|solutionrelative:refundsystem.core\\readmodels\\pendingrequestreadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RefundSystem.API",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.API\\RefundSystem.API.csproj",
+              "RelativeDocumentMoniker": "RefundSystem.API\\RefundSystem.API.csproj",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.API\\RefundSystem.API.csproj",
+              "RelativeToolTip": "RefundSystem.API\\RefundSystem.API.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-07T20:37:55.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Service\\Service\\AuthService.cs",
+              "RelativeDocumentMoniker": "RefundSystem.Service\\Service\\AuthService.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Service\\Service\\AuthService.cs",
+              "RelativeToolTip": "RefundSystem.Service\\Service\\AuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T20:33:53.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthRepository.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Data\\Repository\\AuthRepository.cs",
+              "RelativeDocumentMoniker": "RefundSystem.Data\\Repository\\AuthRepository.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Data\\Repository\\AuthRepository.cs",
+              "RelativeToolTip": "RefundSystem.Data\\Repository\\AuthRepository.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAQwCAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T17:41:25.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Clerk.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\Entities\\Clerk.cs",
+              "RelativeDocumentMoniker": "RefundSystem.Core\\Entities\\Clerk.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\Entities\\Clerk.cs",
+              "RelativeToolTip": "RefundSystem.Core\\Entities\\Clerk.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T09:58:32.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApproveRefundRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.API\\Dtos\\ApproveRefundRequestDto.cs",
+              "RelativeDocumentMoniker": "RefundSystem.API\\Dtos\\ApproveRefundRequestDto.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.API\\Dtos\\ApproveRefundRequestDto.cs",
+              "RelativeToolTip": "RefundSystem.API\\Dtos\\ApproveRefundRequestDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T22:24:25.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RefundController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.API\\Controllers\\RefundController.cs",
+              "RelativeDocumentMoniker": "RefundSystem.API\\Controllers\\RefundController.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.API\\Controllers\\RefundController.cs",
+              "RelativeToolTip": "RefundSystem.API\\Controllers\\RefundController.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAEgAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T22:11:41.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RefundService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Service\\Service\\RefundService.cs",
+              "RelativeDocumentMoniker": "RefundSystem.Service\\Service\\RefundService.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Service\\Service\\RefundService.cs",
+              "RelativeToolTip": "RefundSystem.Service\\Service\\RefundService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T22:02:29.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RequestStatus.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\Entities\\RequestStatus.cs",
+              "RelativeDocumentMoniker": "RefundSystem.Core\\Entities\\RequestStatus.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\Entities\\RequestStatus.cs",
+              "RelativeToolTip": "RefundSystem.Core\\Entities\\RequestStatus.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T21:52:40.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RefundRequest.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\Entities\\RefundRequest.cs",
+              "RelativeDocumentMoniker": "RefundSystem.Core\\Entities\\RefundRequest.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\Entities\\RefundRequest.cs",
+              "RelativeToolTip": "RefundSystem.Core\\Entities\\RefundRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T21:52:34.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MonthlyIncome.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\Entities\\MonthlyIncome.cs",
+              "RelativeDocumentMoniker": "RefundSystem.Core\\Entities\\MonthlyIncome.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\Entities\\MonthlyIncome.cs",
+              "RelativeToolTip": "RefundSystem.Core\\Entities\\MonthlyIncome.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T21:52:23.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Citizen.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\Entities\\Citizen.cs",
+              "RelativeDocumentMoniker": "RefundSystem.Core\\Entities\\Citizen.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\Entities\\Citizen.cs",
+              "RelativeToolTip": "RefundSystem.Core\\Entities\\Citizen.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T21:52:15.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Budget.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\Entities\\Budget.cs",
+              "RelativeDocumentMoniker": "RefundSystem.Core\\Entities\\Budget.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\Entities\\Budget.cs",
+              "RelativeToolTip": "RefundSystem.Core\\Entities\\Budget.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T21:51:41.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RefundSystemDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Data\\Context\\RefundSystemDbContext.cs",
+              "RelativeDocumentMoniker": "RefundSystem.Data\\Context\\RefundSystemDbContext.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Data\\Context\\RefundSystemDbContext.cs",
+              "RelativeToolTip": "RefundSystem.Data\\Context\\RefundSystemDbContext.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAADwv3UAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T21:49:36.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RefundRepository.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Data\\Repository\\RefundRepository.cs",
+              "RelativeDocumentMoniker": "RefundSystem.Data\\Repository\\RefundRepository.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Data\\Repository\\RefundRepository.cs",
+              "RelativeToolTip": "RefundSystem.Data\\Repository\\RefundRepository.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAuwBoAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T21:23:07.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.API\\appsettings.json",
+              "RelativeDocumentMoniker": "RefundSystem.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.API\\appsettings.json",
+              "RelativeToolTip": "RefundSystem.API\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-01T21:05:56.291Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.API\\Program.cs",
+              "RelativeDocumentMoniker": "RefundSystem.API\\Program.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.API\\Program.cs",
+              "RelativeToolTip": "RefundSystem.API\\Program.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAgwBMAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T21:05:21.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IRefundService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\Interfaces\\IRefundService.cs",
+              "RelativeDocumentMoniker": "RefundSystem.Core\\Interfaces\\IRefundService.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\Interfaces\\IRefundService.cs",
+              "RelativeToolTip": "RefundSystem.Core\\Interfaces\\IRefundService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T19:01:50.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IRefundRepository.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\Interfaces\\IRefundRepository.cs",
+              "RelativeDocumentMoniker": "RefundSystem.Core\\Interfaces\\IRefundRepository.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\Interfaces\\IRefundRepository.cs",
+              "RelativeToolTip": "RefundSystem.Core\\Interfaces\\IRefundRepository.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAkwAoAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T18:59:59.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "PendingRequestReadModel.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\ReadModels\\PendingRequestReadModel.cs",
+              "RelativeDocumentMoniker": "RefundSystem.Core\\ReadModels\\PendingRequestReadModel.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\ReadModels\\PendingRequestReadModel.cs",
+              "RelativeToolTip": "RefundSystem.Core\\ReadModels\\PendingRequestReadModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T18:54:22.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MonthlyIncomeReadModel.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\ReadModels\\MonthlyIncomeReadModel.cs",
+              "RelativeDocumentMoniker": "RefundSystem.Core\\ReadModels\\MonthlyIncomeReadModel.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\ReadModels\\MonthlyIncomeReadModel.cs",
+              "RelativeToolTip": "RefundSystem.Core\\ReadModels\\MonthlyIncomeReadModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T18:54:17.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ClerkRequestDetailsReadModel.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\ReadModels\\ClerkRequestDetailsReadModel.cs",
+              "RelativeDocumentMoniker": "RefundSystem.Core\\ReadModels\\ClerkRequestDetailsReadModel.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\ReadModels\\ClerkRequestDetailsReadModel.cs",
+              "RelativeToolTip": "RefundSystem.Core\\ReadModels\\ClerkRequestDetailsReadModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T18:54:06.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "BudgetReadModel.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\ReadModels\\BudgetReadModel.cs",
+              "RelativeDocumentMoniker": "RefundSystem.Core\\ReadModels\\BudgetReadModel.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Home_Task\\RefundSystem\\RefundSystem.Core\\ReadModels\\BudgetReadModel.cs",
+              "RelativeToolTip": "RefundSystem.Core\\ReadModels\\BudgetReadModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T18:43:54.569Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
