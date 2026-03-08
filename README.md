@@ -20,19 +20,19 @@
 
 ### 1. מסד הנתונים
 
-<div dir="rtl">
 
-1. פתחו את **SQL Server Management Studio** והתחברו.
 
-2. הרצו את סקריפט יצירת המסד והטבלאות:
+1 פתחו את **SQL Server Management Studio** והתחברו.
+
+2 הרצו את סקריפט יצירת המסד והטבלאות:
    - **קובץ:** `RefundSystem/Scripts/CreateDatabase.sql`
    - הקובץ יוצר את המסד `RefundSystemDB` והטבלאות.
 
-3. הרצו את סקריפט **נתוני הדמה** (כדי שאפשר יהיה לבדוק את המערכת עם נתונים):
+3 הרצו את סקריפט **נתוני הדמה** (כדי שאפשר יהיה לבדוק את המערכת עם נתונים):
    - **קובץ:** `RefundSystem/Scripts/SeedDemoData.sql`
    - מזין אזרחים, פקידים, הכנסות חודשיות, בקשות ותקציב. ניתן להריץ גם אם כבר הרצתם את CreateDatabase (הסקריפט לא יכפיל נתונים קיימים).
 
-4. הרצו את סקריפטי הפרוצדורות (לפי הסדר):
+4 הרצו את סקריפטי הפרוצדורות (לפי הסדר):
    - `RefundSystem/Scripts/StoredProcedures/CreateRefundRequest.sql`
    - `RefundSystem/Scripts/StoredProcedures/CalculateRefund.sql`
    - `RefundSystem/Scripts/StoredProcedures/GetPendingRequestForClerk.sql`
