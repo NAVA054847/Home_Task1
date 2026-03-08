@@ -1,6 +1,6 @@
 -- יצירת פרצדורה שמחשבת זכאות להחזר
 
-ALTER PROCEDURE [dbo].[CalculateRefund]
+CREATE PROCEDURE [dbo].[CalculateRefund]
     @RequestId INT
 AS
 BEGIN

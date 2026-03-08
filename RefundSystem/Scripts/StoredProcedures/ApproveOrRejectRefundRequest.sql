@@ -9,39 +9,50 @@ CREATE PROCEDURE ApproveOrRejectRefundRequest
 AS
 BEGIN
     SET NOCOUNT ON;
-
-
+    SET XACT_ABORT ON;
 
     BEGIN TRY
         BEGIN TRANSACTION;
 
-        -- שלב 1: שליפת נתוני הבקשה והסטטוס
-        
-        DECLARE @StatusCalculatedId INT;
-        DECLARE @StatusApprovedId INT;
-        DECLARE @StatusRejectedId INT;
-        DECLARE @CurrentStatusId INT;
-        DECLARE @CalculatedAmount DECIMAL(12,2);
+        ----------------------------------------------------
+        -- שלב 1: שליפת סטטוסים
+        ----------------------------------------------------
+        DECLARE 
+            @StatusCalculatedId INT,
+            @StatusApprovedId INT,
+            @StatusRejectedId INT,
+            @StatusPendingId INT;
 
-        SELECT @StatusCalculatedId = Id FROM RequestStatuses WHERE Name = 'Calculated';
-        SELECT @StatusApprovedId = Id FROM RequestStatuses WHERE Name = 'Approved';
-        SELECT @StatusRejectedId = Id FROM RequestStatuses WHERE Name = 'Rejected';
+        SELECT
+            @StatusCalculatedId = MAX(CASE WHEN Name='Calculated' THEN Id END),
+            @StatusApprovedId   = MAX(CASE WHEN Name='Approved'   THEN Id END),
+            @StatusRejectedId   = MAX(CASE WHEN Name='Rejected'   THEN Id END),
+            @StatusPendingId    = MAX(CASE WHEN Name='Pending'   THEN Id END)
+        FROM RequestStatuses;
+
+        ----------------------------------------------------
+        -- שליפת הבקשה
+        ----------------------------------------------------
+        DECLARE 
+            @CurrentStatusId INT,
+            @CalculatedAmount DECIMAL(12,2);
 
         SELECT 
             @CurrentStatusId = StatusId,
             @CalculatedAmount = CalculatedAmount
-        FROM RefundRequests
+        FROM RefundRequests WITH (UPDLOCK, ROWLOCK)
         WHERE Id = @RequestId;
- 
 
+        IF @CurrentStatusId IS NULL
+        BEGIN
+            RAISERROR('הבקשה לא קיימת',16,1);
+            ROLLBACK;
+            RETURN;
+        END
 
-
-
-
-        DECLARE @StatusPendingId INT;
-        SELECT @StatusPendingId = Id FROM RequestStatuses WHERE Name = 'Pending';
-
-        -- שלב 2: טיפול בדחייה – מותר גם כשלא חושב (Pending או Calculated)
+        ----------------------------------------------------
+        -- טיפול בדחייה
+        ----------------------------------------------------
         IF @IsApproved = 0
         BEGIN
             IF @CurrentStatusId NOT IN (@StatusPendingId, @StatusCalculatedId)
@@ -52,8 +63,7 @@ BEGIN
             END
 
             UPDATE RefundRequests
-            SET
-                StatusId = @StatusRejectedId,
+            SET StatusId = @StatusRejectedId,
                 ApprovedAmount = 0
             WHERE Id = @RequestId;
 
@@ -61,7 +71,9 @@ BEGIN
             RETURN;
         END
 
-        -- אישור – הבקשה חייבת להיות במצב Calculated
+        ----------------------------------------------------
+        -- בדיקות אישור
+        ----------------------------------------------------
         IF @CurrentStatusId <> @StatusCalculatedId
         BEGIN
             RAISERROR('ניתן לאשר רק בקשה במצב Calculated',16,1);
@@ -69,8 +81,6 @@ BEGIN
             RETURN;
         END
 
-
-        -- שלב 3: בדיקות אישור
         IF @ApprovedAmount IS NULL OR @ApprovedAmount <= 0
         BEGIN
             RAISERROR('יש להזין סכום מאושר תקין',16,1);
@@ -85,17 +95,21 @@ BEGIN
             RETURN;
         END
 
-        -- שלב 4: שליפת התקציב החודשי
-        DECLARE @Year INT = YEAR(GETDATE());
-        DECLARE @Month INT = MONTH(GETDATE());
-        DECLARE @TotalBudget DECIMAL(14,2);
-        DECLARE @UsedBudget DECIMAL(14,2);
+        ----------------------------------------------------
+        -- שלב 2: שליפת התקציב
+        ----------------------------------------------------
+        DECLARE 
+            @Year INT = YEAR(GETDATE()),
+            @Month INT = MONTH(GETDATE()),
+            @TotalBudget DECIMAL(14,2),
+            @RowVersion VARBINARY(8);
 
         SELECT 
             @TotalBudget = TotalBudget,
-            @UsedBudget = UsedBudget
-        FROM Budgets WITH (UPDLOCK, ROWLOCK)
-        WHERE [Year] = @Year AND [Month] = @Month;
+            @RowVersion = RowVersion
+        FROM Budgets
+        WHERE [Year] = @Year
+          AND [Month] = @Month;
 
         IF @TotalBudget IS NULL
         BEGIN
@@ -104,36 +118,46 @@ BEGIN
             RETURN;
         END
 
-        DECLARE @AvailableBudget DECIMAL(14,2);
-        SET @AvailableBudget = @TotalBudget - @UsedBudget;
+        ----------------------------------------------------
+        -- עדכון התקציב (Atomic Update)
+        ----------------------------------------------------
+        UPDATE Budgets
+        SET UsedBudget = UsedBudget + @ApprovedAmount
+        WHERE [Year] = @Year
+          AND [Month] = @Month
+          AND RowVersion = @RowVersion
+          AND (TotalBudget - UsedBudget) >= @ApprovedAmount;
 
-        IF @ApprovedAmount > @AvailableBudget
+        IF @@ROWCOUNT = 0
         BEGIN
-            RAISERROR('אין מספיק תקציב פנוי לאישור הבקשה',16,1);
+            RAISERROR('אין מספיק תקציב פנוי או שהתקציב עודכן על ידי משתמש אחר',16,1);
             ROLLBACK;
             RETURN;
         END
 
-        
-        -- שלב 5: עדכון התקציב
-        
-        UPDATE Budgets
-        SET UsedBudget = UsedBudget + @ApprovedAmount
-        WHERE [Year] = @Year AND [Month] = @Month;
-
-        
-        -- שלב 6: עדכון הבקשה
+        ----------------------------------------------------
+        -- עדכון הבקשה
+        ----------------------------------------------------
         UPDATE RefundRequests
-        SET
-            StatusId = @StatusApprovedId,
+        SET StatusId = @StatusApprovedId,
             ApprovedAmount = @ApprovedAmount
-        WHERE Id = @RequestId;
+        WHERE Id = @RequestId
+          AND StatusId = @StatusCalculatedId;
+
+        IF @@ROWCOUNT = 0
+        BEGIN
+            RAISERROR('הבקשה שונתה על ידי משתמש אחר.',16,1);
+            ROLLBACK;
+            RETURN;
+        END
 
         COMMIT;
 
     END TRY
     BEGIN CATCH
-        ROLLBACK;
+        IF @@TRANCOUNT > 0
+            ROLLBACK;
+
         THROW;
     END CATCH
 END

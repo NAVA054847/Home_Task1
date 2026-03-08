@@ -85,9 +85,6 @@ function ClerkRequestDetailsScreen() {
     return acc;
   }, {});
 
-  const getApproveErrorMessage = () =>
-    'הסכום שהוזן אינו תקין: יש להזין סכום שלא נמוך מהסכום המחושב ולא גבוה מהתקציב הזמין בחודש.';
-
   const handleCalculate = async () => {
     if (!requestId) return;
     setCalculateError(null);
@@ -125,7 +122,7 @@ function ClerkRequestDetailsScreen() {
       setApproveSuccess(true);
       setTimeout(() => navigate('/clerk'), 1500);
     } catch (err) {
-      setApproveError(getApproveErrorMessage(err));
+      setApproveError('שגיאה באישור הבקשה. אם הסכום תקין, ייתכן שמדובר במשהו זמני – נסה שוב.');
     } finally {
       setApproveLoading(false);
     }
