@@ -14,8 +14,8 @@ namespace RefundSystem.Core.Interfaces
         Task<IReadOnlyList<PendingRequestReadModel>> GetPendingRequestsForClerkAsync(
             CancellationToken cancellationToken = default);
 
-        /// <summary>פרטי בקשה לפקיד.</summary>
-        Task<ClerkRequestDetailsReadModel> GetRequestDetailsForClerkAsync(
+        /// <summary>פרטי בקשה לפקיד (נתוני גלם – כולל כל הבקשות).</summary>
+        Task<ClerkRequestDetailsRaw?> GetRequestDetailsForClerkAsync(
             int requestId,
             CancellationToken cancellationToken = default);
 

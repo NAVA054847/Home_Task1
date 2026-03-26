@@ -11,7 +11,8 @@ public partial class Citizen
 
     public string FullName { get; set; } = null!;
 
+//לכל אזרח יש מספר הכנסות חודשיות.
     public virtual ICollection<MonthlyIncome> MonthlyIncomes { get; set; } = new List<MonthlyIncome>();
-
+//לכל אזרח יש מספר בקשות החזר.
     public virtual ICollection<RefundRequest> RefundRequests { get; set; } = new List<RefundRequest>();
 }

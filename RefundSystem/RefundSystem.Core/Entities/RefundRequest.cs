@@ -20,8 +20,8 @@ public partial class RefundRequest
     public DateTime CreatedAt { get; set; }
 
     public DateTime? CalculatedAt { get; set; }
-
+//לכל בקשת החזר יש אזרח אחד.
     public virtual Citizen Citizen { get; set; } = null!;
-
+//לכל בקשת החזר יש סטטוס אחד.
     public virtual RequestStatus Status { get; set; } = null!;
 }

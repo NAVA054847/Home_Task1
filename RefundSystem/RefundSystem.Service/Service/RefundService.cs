@@ -1,9 +1,10 @@
+using System.Linq;
 using RefundSystem.Core.Interfaces;
 using RefundSystem.Core.ReadModels;
 
 namespace RefundSystem.Service.Services
 {
-    /// <summary>שיכבה לוגית להחזרים – מעבירה קריאות ל-Repository ללא לוגיקה נוספת.</summary>
+    /// <summary>שיכבה לוגית להחזרים – מפעילה לוגיקה עסקית ומעבירה קריאות ל-Repository.</summary>
     public class RefundService : IRefundService
     {
         private readonly IRefundRepository _repository;
@@ -43,14 +44,28 @@ namespace RefundSystem.Service.Services
                 cancellationToken);
         }
 
-        /// <summary>פרטי בקשה לפקיד – בקשה נוכחית, הכנסות, היסטוריה, תקציב.</summary>
-        public async Task<ClerkRequestDetailsReadModel> GetRequestDetailsForClerkAsync(
+        /// <summary>פרטי בקשה לפקיד – בקשה נוכחית, הכנסות, היסטוריה (ללא הנוכחית), תקציב.</summary>
+        public async Task<ClerkRequestDetailsReadModel?> GetRequestDetailsForClerkAsync(
             int requestId,
             CancellationToken cancellationToken = default)
         {
-            return await _repository.GetRequestDetailsForClerkAsync(
+            var raw = await _repository.GetRequestDetailsForClerkAsync(
                 requestId,
                 cancellationToken);
+
+            if (raw is null)
+                return null;
+
+            // היסטוריה ללא הבקשה הנוכחית – לוגיקה עסקית
+            var pastRequestsOnly = raw.AllPastRequests
+                .Where(r => r.RequestId != raw.CurrentRequest.RequestId)
+                .ToList();
+
+            return new ClerkRequestDetailsReadModel(
+                raw.CurrentRequest,
+                raw.Incomes,
+                pastRequestsOnly,
+                raw.CurrentMonthBudget);
         }
 
         /// <summary>אישור או דחיית בקשת החזר.</summary>

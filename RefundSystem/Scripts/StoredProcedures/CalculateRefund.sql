@@ -7,6 +7,7 @@ BEGIN
     SET NOCOUNT ON;
 
     BEGIN TRY
+--    BEGIN TRANSACTION;
 
         -- שליפת סטטוסים פעם אחת
 
@@ -41,7 +42,7 @@ BEGIN
             @TaxYear = TaxYear,
             @CurrentStatusId = StatusId,
             @CalculatedAmount = CalculatedAmount
-        FROM RefundRequests
+        FROM RefundRequests WITH (UPDLOCK, ROWLOCK)
         WHERE Id = @RequestId;
 
         IF @CitizenId IS NULL
@@ -114,10 +115,16 @@ BEGIN
         SET CalculatedAmount = @Refund,
             CalculatedAt = GETDATE(),
             StatusId = @StatusCalculatedId
-        WHERE Id = @RequestId;
+        WHERE Id = @RequestId
+          AND StatusId = @StatusPendingId;
+
+        --   COMMIT TRANSACTION;
 
     END TRY
     BEGIN CATCH
+        --  IF @@TRANCOUNT > 0
+        -- ROLLBACK TRANSACTION;
+
         THROW;
     END CATCH
 

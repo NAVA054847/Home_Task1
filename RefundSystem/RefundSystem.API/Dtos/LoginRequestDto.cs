@@ -1,9 +1,9 @@
 namespace RefundSystem.API.Dtos;
 
-/// <summary>גוף בקשה להתחברות – תעודת זהות (POST login).</summary>
+//גוף בקשה להתחברות – תעודת זהות (POST login).
 public sealed class LoginRequestDto
 {
-    /// <summary>תעודת זהות של המשתמש.</summary>
+    //תעודת זהות של המשתמש.
     public string IdentityNumber { get; set; } = string.Empty;
 }
 

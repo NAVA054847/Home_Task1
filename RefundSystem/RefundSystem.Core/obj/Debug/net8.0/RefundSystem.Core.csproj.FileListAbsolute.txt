@@ -9,3 +9,4 @@ C:\Users\USER\Desktop\Home_Task\RefundSystem\RefundSystem.Core\obj\Debug\net8.0\
 C:\Users\USER\Desktop\Home_Task\RefundSystem\RefundSystem.Core\obj\Debug\net8.0\refint\RefundSystem.Core.dll
 C:\Users\USER\Desktop\Home_Task\RefundSystem\RefundSystem.Core\obj\Debug\net8.0\RefundSystem.Core.pdb
 C:\Users\USER\Desktop\Home_Task\RefundSystem\RefundSystem.Core\obj\Debug\net8.0\ref\RefundSystem.Core.dll
+C:\Users\USER\Desktop\Home_Task\RefundSystem\RefundSystem.Core\obj\Debug\net8.0\RefundSystem.Core.sourcelink.json

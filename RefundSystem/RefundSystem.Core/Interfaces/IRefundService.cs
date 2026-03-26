@@ -15,7 +15,7 @@ namespace RefundSystem.Core.Interfaces
             CancellationToken cancellationToken = default);
 
         /// <summary>פרטי בקשה לפקיד.</summary>
-        Task<ClerkRequestDetailsReadModel> GetRequestDetailsForClerkAsync(
+        Task<ClerkRequestDetailsReadModel?> GetRequestDetailsForClerkAsync(
             int requestId,
             CancellationToken cancellationToken = default);
 

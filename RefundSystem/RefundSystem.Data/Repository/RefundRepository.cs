@@ -1,5 +1,4 @@
 using System.Data;
-using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using RefundSystem.Core.Interfaces;
 using RefundSystem.Core.ReadModels;
@@ -53,8 +52,8 @@ namespace RefundSystem.Data.Repository
                 .ToListAsync(cancellationToken);
         }
 
-        /// <summary>פרטי בקשה לפקיד: בקשה נוכחית, הכנסות, היסטוריה, תקציב חודשי.</summary>
-        public async Task<ClerkRequestDetailsReadModel> GetRequestDetailsForClerkAsync(
+        /// <summary>פרטי בקשה לפקיד: בקשה נוכחית, הכנסות, כל הבקשות, תקציב חודשי (נתוני גלם – ללא סינון).</summary>
+        public async Task<ClerkRequestDetailsRaw?> GetRequestDetailsForClerkAsync(
             int requestId,
             CancellationToken cancellationToken = default)
         {
@@ -86,7 +85,7 @@ namespace RefundSystem.Data.Repository
             }
 
             if (currentRequest == null)
-                return null!; // בקשה לא נמצאה
+                return null; // בקשה לא נמצאה
 
             // תוצאה 2: הכנסות חודשיות (שנת מס, חודש, סכום)
             var incomes = new List<MonthlyIncomeReadModel>();
@@ -99,12 +98,12 @@ namespace RefundSystem.Data.Repository
                     reader.GetDecimal(2)));
             }
 
-            // תוצאה 3: כל בקשות האזרח (כולל הנוכחית – נסנן למטה)
-            var pastRequests = new List<RefundRequestSummaryReadModel>();
+            // תוצאה 3: כל בקשות האזרח (כולל הנוכחית)
+            var allPastRequests = new List<RefundRequestSummaryReadModel>();
             await reader.NextResultAsync(cancellationToken);
             while (await reader.ReadAsync(cancellationToken))
             {
-                pastRequests.Add(new RefundRequestSummaryReadModel(
+                allPastRequests.Add(new RefundRequestSummaryReadModel(
                     reader.GetInt32(0),
                     reader.GetInt32(1),
                     reader.IsDBNull(2) ? null : reader.GetDecimal(2),
@@ -124,15 +123,10 @@ namespace RefundSystem.Data.Repository
                     reader.GetDecimal(2));
             }
 
-            // היסטוריה ללא הבקשה הנוכחית – להצגה בנפרד
-            var pastRequestsOnly = pastRequests
-                .Where(r => r.RequestId != currentRequest.RequestId)
-                .ToList();
-
-            return new ClerkRequestDetailsReadModel(
+            return new ClerkRequestDetailsRaw(
                 currentRequest,
                 incomes,
-                pastRequestsOnly,
+                allPastRequests,
                 currentMonthBudget);
         }
 

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace RefundSystem.Core.Entities;
@@ -15,5 +15,6 @@ public partial class MonthlyIncome
 
     public decimal Amount { get; set; }
 
+//לכל הכנסה חודשית יש אזרח אחד.
     public virtual Citizen Citizen { get; set; } = null!;
 }

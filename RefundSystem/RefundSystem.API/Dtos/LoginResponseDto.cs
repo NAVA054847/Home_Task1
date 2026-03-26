@@ -1,15 +1,15 @@
 namespace RefundSystem.API.Dtos;
 
-/// <summary>תגובת התחברות – תפקיד, מזהה ושם מלא (מה שה-API מחזיר ללקוח).</summary>
+//תגובת התחברות – תפקיד, מזהה ושם מלא (מה שה-API מחזיר ללקוח).
 public sealed class LoginResponseDto
-{
-    /// <summary>תפקיד: Clerk או Citizen.</summary>
+{       
+    //תפקיד: Clerk או Citizen.
     public string Role { get; set; } = string.Empty;
 
-    /// <summary>מזהה הפקיד או האזרח.</summary>
+    //מזהה הפקיד או האזרח.
     public int Id { get; set; }
 
-    /// <summary>שם מלא.</summary>
+    //שם מלא.
     public string FullName { get; set; } = string.Empty;
 }
 

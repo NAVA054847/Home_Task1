@@ -2,7 +2,8 @@ import React from 'react';
 import { formatMoney } from './formatters';
 
 /**
- * מלבן – החלטת הפקיד: סכום לאישור, כפתורי אשר/דחה.
+ * כרטיס החלטת פקיד: חישוב זכאות (אם אין סכום מחושב), שדה סכום לאישור, אשר/דחה.
+ * state וקריאות API נשלטים מההורה (ClerkRequestDetailsScreen) דרך props.
  */
 function ClerkDecisionCard({
   currentRequest,
@@ -18,6 +19,7 @@ function ClerkDecisionCard({
   successType,
   error,
 }) {
+  // אם אין סכום מחושב — מציגים כפתור "חשב"; אחרת מציגים את הסכום המוצע
   const hasCalculatedAmount = currentRequest?.calculatedAmount != null;
 
   return (
@@ -57,6 +59,7 @@ function ClerkDecisionCard({
         />
       </div>
       {error && <p className="mt-2 text-sm text-gov-error font-gov">{error}</p>}
+      {/* הודעת הצלחה אחרי approve/reject — לפני ניווט חזרה לרשימה */}
       {success && (
         <p className={`mt-2 text-sm font-medium font-gov ${successType === 'rejected' ? 'text-gov-error' : 'text-gov-success'}`}>
           {successType === 'rejected' ? 'הבקשה נדחתה. מחזיר לרשימה...' : 'הבקשה אושרה. מחזיר לרשימה...'}

@@ -9,5 +9,6 @@ public partial class RequestStatus
 
     public string Name { get; set; } = null!;
 
+//לכל סטטוס בקשה יש מספר בקשות החזר.
     public virtual ICollection<RefundRequest> RefundRequests { get; set; } = new List<RefundRequest>();
 }

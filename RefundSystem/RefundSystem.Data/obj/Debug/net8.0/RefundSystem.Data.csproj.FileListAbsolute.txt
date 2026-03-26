@@ -15,3 +15,4 @@ C:\Users\USER\Desktop\Home_Task\RefundSystem\RefundSystem.Data\obj\Debug\net8.0\
 C:\Users\USER\Desktop\Home_Task\RefundSystem\RefundSystem.Data\obj\Debug\net8.0\RefundSystem.Data.pdb
 C:\Users\USER\Desktop\Home_Task\RefundSystem\RefundSystem.Data\obj\Debug\net8.0\RefundSystem.Data.genruntimeconfig.cache
 C:\Users\USER\Desktop\Home_Task\RefundSystem\RefundSystem.Data\obj\Debug\net8.0\ref\RefundSystem.Data.dll
+C:\Users\USER\Desktop\Home_Task\RefundSystem\RefundSystem.Data\obj\Debug\net8.0\RefundSystem.Data.sourcelink.json

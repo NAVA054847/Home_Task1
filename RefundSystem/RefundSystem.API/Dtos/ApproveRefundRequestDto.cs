@@ -1,15 +1,15 @@
 namespace RefundSystem.API.Dtos;
 
-/// <summary>גוף בקשה לאישור או דחיית בקשת החזר (POST approve).</summary>
+//גוף בקשה לאישור או דחיית בקשת החזר (POST approve).
 public sealed class ApproveRefundRequestDto
 {
-    /// <summary>מזהה הבקשה.</summary>
+    //מזהה הבקשה.
     public int RequestId { get; set; }
 
-    /// <summary>true = אישור, false = דחייה.</summary>
+    //true = אישור, false = דחייה.
     public bool IsApproved { get; set; }
 
-    /// <summary>סכום מאושר – רלוונטי רק באישור; בדחייה null.</summary>
+    //סכום מאושר – רלוונטי רק באישור; בדחייה null.
     public decimal? ApprovedAmount { get; set; }
 }
 

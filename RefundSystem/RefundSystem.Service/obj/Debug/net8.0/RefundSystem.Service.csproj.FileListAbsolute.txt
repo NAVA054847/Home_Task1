@@ -15,3 +15,4 @@ C:\Users\USER\Desktop\Home_Task\RefundSystem\RefundSystem.Service\obj\Debug\net8
 C:\Users\USER\Desktop\Home_Task\RefundSystem\RefundSystem.Service\obj\Debug\net8.0\refint\RefundSystem.Service.dll
 C:\Users\USER\Desktop\Home_Task\RefundSystem\RefundSystem.Service\obj\Debug\net8.0\RefundSystem.Service.pdb
 C:\Users\USER\Desktop\Home_Task\RefundSystem\RefundSystem.Service\obj\Debug\net8.0\ref\RefundSystem.Service.dll
+C:\Users\USER\Desktop\Home_Task\RefundSystem\RefundSystem.Service\obj\Debug\net8.0\RefundSystem.Service.sourcelink.json

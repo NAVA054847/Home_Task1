@@ -6,6 +6,7 @@ import { getCitizenRequestView } from '../../api/refund';
 import CitizenLastRequestCard from './CitizenLastRequestCard';
 import CitizenHistoryCard from './CitizenHistoryCard';
 
+/** מסך אזרח: טוען בקשות לפי ת.ז. (API), מציג בקשה אחרונה + היסטוריה. תלוי Redux auth; מגן ל-login. */
 function CitizenScreen() {
   const user = useSelector((state) => state.auth.user);
   const dispatch = useDispatch();
@@ -14,10 +15,12 @@ function CitizenScreen() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
+  // אם אין משתמש אזרח — חזרה ל-login
   useEffect(() => {
     if (!user || user.role !== 'Citizen') navigate('/login');
   }, [user, navigate]);
 
+  // טעינת נתונים מה-API (ביטול אם יציאה מהמסך)
   useEffect(() => {
     if (!user || user.role !== 'Citizen') {
       setLoading(false);
@@ -51,6 +54,7 @@ function CitizenScreen() {
 
   if (!user || user.role !== 'Citizen') return null;
 
+  // API מחזיר רשימה ממוינת מהחדשה; [0] = אחרונה, השאר = היסטוריה
   const requests = data?.requests ?? [];
   const lastRequest = requests[0] ?? null;
   const history = requests.length > 1 ? requests.slice(1) : [];

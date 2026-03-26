@@ -10,8 +10,9 @@ import CurrentRequestCard from './CurrentRequestCard';
 import ClerkDecisionCard from './ClerkDecisionCard';
 
 /**
- * מסך פרטי בקשת זכאות – נפתח בלחיצה על בקשה.
- * מרכיב: תקציב צד, הכנסות לפי שנים, בקשות עבר, פרטי הבקשה הנוכחית, החלטת הפקיד.
+ * מסך פרטי בקשה לפקיד (נתיב: /clerk/request/:requestId).
+ * טוען getRequestDetails, מציג הכנסות/עבר/בקשה נוכחית; בצד — תקציב חודש + אישור/דחייה/חישוב זכאות.
+ * תלוי Redux (Clerk); state של טפסים ו-API כאן, מועבר ל-ClerkDecisionCard.
  */
 function ClerkRequestDetailsScreen() {
   const { requestId } = useParams();
@@ -29,10 +30,12 @@ function ClerkRequestDetailsScreen() {
   const [calculateLoading, setCalculateLoading] = useState(false);
   const [calculateError, setCalculateError] = useState(null);
 
+  // אם אין משתמש פקיד — חזרה ל-login
   useEffect(() => {
     if (!user || user.role !== 'Clerk') navigate('/login');
   }, [user, navigate]);
 
+  // טעינת פרטי בקשה לפי requestId מה-URL (ביטול אם יציאה מהמסך)
   useEffect(() => {
     if (!requestId) return;
     let cancelled = false;
@@ -78,6 +81,7 @@ function ClerkRequestDetailsScreen() {
 
   const { currentRequest, incomes = [], pastRequests = [], currentMonthBudget } = details;
 
+  // קיבוץ הכנסות לפי taxYear — ל-IncomesByYearCard
   const incomesByYear = incomes.reduce((acc, inc) => {
     const year = inc.taxYear;
     if (!acc[year]) acc[year] = [];
@@ -85,6 +89,7 @@ function ClerkRequestDetailsScreen() {
     return acc;
   }, {});
 
+  // POST calculate — רענון details אחרי חישוב מוצלח
   const handleCalculate = async () => {
     if (!requestId) return;
     setCalculateError(null);
@@ -103,6 +108,7 @@ function ClerkRequestDetailsScreen() {
     }
   };
 
+  // POST approve עם סכום; אחרי הצלחה — הודעה וניווט ל-/clerk
   const handleApprove = async () => {
     const trimmed = approvedAmount.trim();
     if (trimmed === '') {
@@ -128,7 +134,7 @@ function ClerkRequestDetailsScreen() {
     }
   };
 
-
+  // POST reject (ללא סכום); אחרי הצלחה — הודעה וניווט ל-/clerk
   const handleReject = async () => {
     setApproveError(null);
     setApproveLoading(true);
